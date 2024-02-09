@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Restaurant
-//
-//  Created by John Tejada on 2/8/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
