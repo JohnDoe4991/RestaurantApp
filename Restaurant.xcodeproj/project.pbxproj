@@ -14,6 +14,7 @@
 		2A3E32412B75E15B00D0C259 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E32402B75E15B00D0C259 /* RestaurantTests.swift */; };
 		2A3E324B2B75E15B00D0C259 /* RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E324A2B75E15B00D0C259 /* RestaurantUITests.swift */; };
 		2A3E324D2B75E15B00D0C259 /* RestaurantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E324C2B75E15B00D0C259 /* RestaurantUITestsLaunchTests.swift */; };
+		2A3E32632B784F6900D0C259 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E32622B784F6900D0C259 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		2A3E324C2B75E15B00D0C259 /* RestaurantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2A3E32592B75E27E00D0C259 /* Restaurant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Restaurant.entitlements; sourceTree = "<group>"; };
 		2A3E325A2B75E29400D0C259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2A3E32622B784F6900D0C259 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		2A3E322E2B75E15900D0C259 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				2A3E32612B784F5600D0C259 /* Home Screen */,
 				2A3E325A2B75E29400D0C259 /* Info.plist */,
 				2A3E32592B75E27E00D0C259 /* Restaurant.entitlements */,
 				2A3E322F2B75E15900D0C259 /* RestaurantApp.swift */,
@@ -129,6 +132,14 @@
 				2A3E324C2B75E15B00D0C259 /* RestaurantUITestsLaunchTests.swift */,
 			);
 			path = RestaurantUITests;
+			sourceTree = "<group>";
+		};
+		2A3E32612B784F5600D0C259 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2A3E32622B784F6900D0C259 /* HomeScreen.swift */,
+			);
+			path = "Home Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			files = (
 				2A3E32322B75E15900D0C259 /* ContentView.swift in Sources */,
 				2A3E32302B75E15900D0C259 /* RestaurantApp.swift in Sources */,
+				2A3E32632B784F6900D0C259 /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
