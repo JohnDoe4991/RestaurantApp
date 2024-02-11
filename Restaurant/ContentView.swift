@@ -90,7 +90,6 @@ struct ContentView: View {
                         // Check if any of the fields are non-empty as a condition to "log in"
                         if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
                             self.userId = "loggedIn" // Or use a more meaningful value/ID
-                            
                         }
                     }) {
                         // Present a modal view for user details input
