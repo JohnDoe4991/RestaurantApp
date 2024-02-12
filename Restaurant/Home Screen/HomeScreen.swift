@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeScreen: View {
     
     var body: some View {
-        Text("Welcome to the Main Screen!")
+        Text("Welcome to the Main Screen1!")
     }
 }
 
