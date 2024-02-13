@@ -99,7 +99,6 @@ struct ContentView: View {
                     HomeScreen()
                 }
             }
-            .navigationTitle("Sign In")
         }
     }
 }

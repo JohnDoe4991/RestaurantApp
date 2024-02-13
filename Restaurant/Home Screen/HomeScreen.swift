@@ -17,7 +17,6 @@ struct HomeScreen: View {
         ZStack (alignment: .bottom) {
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true)
                 .ignoresSafeArea()
-                .tint(.pink)
             
             LocationButton(.currentLocation) {
                 viewModel.requestAllowOnceLocationPermission()
