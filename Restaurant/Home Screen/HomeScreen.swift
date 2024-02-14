@@ -50,7 +50,7 @@ struct HomeScreen: View {
                     .padding(.bottom, 50)
                 }
                 
-                // Within your VStack in HomeScreen
+               
                 if !showingLocationButton {
                     NavigationLink(destination: ResultsScreen(results: viewModel.searchResults), isActive: $showingResults) {
                         EmptyView()
@@ -67,6 +67,11 @@ struct HomeScreen: View {
                 Text ("Find Restaurants")
                     .font(.system(size: 14))
                     .fontWeight(.semibold)
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: PhotoScreen()) {
+                    Text("Next")
+                }
             }
         }
     }

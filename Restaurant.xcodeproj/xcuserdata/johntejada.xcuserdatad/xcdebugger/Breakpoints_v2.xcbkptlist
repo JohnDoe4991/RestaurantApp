@@ -14,10 +14,10 @@
             filePath = "Restaurant/Home Screen/HomeScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "HomeScreen"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
