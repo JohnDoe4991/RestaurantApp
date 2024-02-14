@@ -7,12 +7,33 @@
 
 import SwiftUI
 
+
+
 struct ToggleScreen: View {
+    @EnvironmentObject var userInfo: UserInformation
+    
+    @State private var isToggleOn = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Toggle(isOn: $isToggleOn) {
+                Text("Who Am I?")
+            }
+            .padding()
+            
+            if isToggleOn {
+                Text("\(userInfo.firstName) \(userInfo.lastName)") 
+            } else {
+                Text("Toggle is off")
+            }
+        }
     }
 }
 
-#Preview {
-    ToggleScreen()
+
+struct ToggleScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        ToggleScreen().environmentObject(UserInformation())
+    }
 }
+

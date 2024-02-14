@@ -64,47 +64,51 @@
 //}
 
 import SwiftUI
+import Combine
 
-struct ContentView: View {
-    @Environment(\.colorScheme) var colorScheme
-    @State private var userId: String = ""
-    @State private var showingDetail = false
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
-    @State private var email: String = ""
-    
-    var body: some View {
-        NavigationView {
-            VStack {
-                if userId.isEmpty {
-                    Button("Sign In with Apple") {
-                        self.showingDetail = true
-                    }
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .padding()
-                    .foregroundColor(colorScheme == .dark ? .black : .white)
-                    .background(colorScheme == .dark ? .white : .black)
-                    .cornerRadius(8)
-                    .padding(.horizontal)
-                    .sheet(isPresented: $showingDetail, onDismiss: {
-                        // Check if any of the fields are non-empty as a condition to "log in"
-                        if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
-                            self.userId = "loggedIn" // Or use a more meaningful value/ID
+    struct ContentView: View {
+        @EnvironmentObject var userInfo: UserInformation
+        @Environment(\.colorScheme) var colorScheme
+        
+        @State private var userId: String = ""
+        @State private var showingDetail = false
+        @State private var firstName: String = ""
+        @State private var lastName: String = ""
+        @State private var email: String = ""
+        
+        var body: some View {
+            NavigationView {
+                VStack {
+                    if userId.isEmpty {
+                        Button("Sign In with Apple") {
+                            self.showingDetail = true
                         }
-                    }) {
-                        // Present a modal view for user details input
-                        UserDetailsInputView(firstName: $firstName, lastName: $lastName, email: $email, showModal: $showingDetail)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(colorScheme == .dark ? .black : .white)
+                        .background(colorScheme == .dark ? .white : .black)
+                        .cornerRadius(8)
+                        .padding(.horizontal)
+                        .sheet(isPresented: $showingDetail, onDismiss: {
+                            // Check if any of the fields are non-empty as a condition to "log in"
+                            if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
+                                self.userId = "loggedIn" // Or use a more meaningful value/ID
+                            }
+                        }) {
+                            // Present a modal view for user details input
+                            UserDetailsInputView(firstName: $firstName, lastName: $lastName, email: $email, showModal: $showingDetail)
+                        }
+                    } else {
+                        HomeScreen()
                     }
-                } else {
-                    HomeScreen()
                 }
             }
         }
     }
-}
 
 
 struct UserDetailsInputView: View {
+    @EnvironmentObject var userInfo: UserInformation
     @Binding var firstName: String
     @Binding var lastName: String
     @Binding var email: String
@@ -120,9 +124,10 @@ struct UserDetailsInputView: View {
                 }
                 Section {
                     Button("Submit") {
-                        // Submitting the form will now dismiss the modal and trigger navigation in ContentView
+                        userInfo.firstName = firstName
+                        userInfo.lastName = lastName
+                        userInfo.email = email
                         self.showModal = false
-                        // No need to manually set userId here; ContentView handles it on modal dismissal
                     }
                 }
             }
@@ -132,6 +137,12 @@ struct UserDetailsInputView: View {
             })
         }
     }
+}
+
+class UserInformation: ObservableObject {
+    @Published var firstName: String = ""
+    @Published var lastName: String = ""
+    @Published var email: String = ""
 }
 
 #Preview {
