@@ -80,7 +80,6 @@
 		2A3E32232B75E15900D0C259 = {
 			isa = PBXGroup;
 			children = (
-				2A3E32672B7C36AB00D0C259 /* ResultsScreen.swift */,
 				2A3E322E2B75E15900D0C259 /* Restaurant */,
 				2A3E323F2B75E15B00D0C259 /* RestaurantTests */,
 				2A3E32492B75E15B00D0C259 /* RestaurantUITests */,
@@ -141,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				2A3E32622B784F6900D0C259 /* HomeScreen.swift */,
+				2A3E32672B7C36AB00D0C259 /* ResultsScreen.swift */,
 			);
 			path = "Home Screen";
 			sourceTree = "<group>";
