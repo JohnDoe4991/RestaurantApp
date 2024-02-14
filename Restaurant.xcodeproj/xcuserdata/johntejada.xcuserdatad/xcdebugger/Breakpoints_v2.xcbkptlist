@@ -14,10 +14,42 @@
             filePath = "Restaurant/Home Screen/HomeScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "unknown"
             landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "73FEA4DC-90F8-4D82-A0F4-9B8EC21CC11B - 23ead6ffbac4192e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Restaurant.HomeViewModel.locationManager.getter : __C.CLLocationManager"
+                  moduleName = "Restaurant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johntejada/Desktop/MedEaze/RestaurantApp/Restaurant/Restaurant/Home%20Screen/HomeScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "73FEA4DC-90F8-4D82-A0F4-9B8EC21CC11B - 87d6b753aa8e4605"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Restaurant.HomeViewModel.init() -&gt; Restaurant.HomeViewModel"
+                  moduleName = "Restaurant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johntejada/Desktop/MedEaze/RestaurantApp/Restaurant/Restaurant/Home%20Screen/HomeScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "396">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

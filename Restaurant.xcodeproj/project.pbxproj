@@ -15,6 +15,7 @@
 		2A3E324B2B75E15B00D0C259 /* RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E324A2B75E15B00D0C259 /* RestaurantUITests.swift */; };
 		2A3E324D2B75E15B00D0C259 /* RestaurantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E324C2B75E15B00D0C259 /* RestaurantUITestsLaunchTests.swift */; };
 		2A3E32632B784F6900D0C259 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E32622B784F6900D0C259 /* HomeScreen.swift */; };
+		2A3E32682B7C36AB00D0C259 /* ResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E32672B7C36AB00D0C259 /* ResultsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		2A3E32592B75E27E00D0C259 /* Restaurant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Restaurant.entitlements; sourceTree = "<group>"; };
 		2A3E325A2B75E29400D0C259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2A3E32622B784F6900D0C259 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		2A3E32672B7C36AB00D0C259 /* ResultsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		2A3E32232B75E15900D0C259 = {
 			isa = PBXGroup;
 			children = (
+				2A3E32672B7C36AB00D0C259 /* ResultsScreen.swift */,
 				2A3E322E2B75E15900D0C259 /* Restaurant */,
 				2A3E323F2B75E15B00D0C259 /* RestaurantTests */,
 				2A3E32492B75E15B00D0C259 /* RestaurantUITests */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3E32682B7C36AB00D0C259 /* ResultsScreen.swift in Sources */,
 				2A3E32322B75E15900D0C259 /* ContentView.swift in Sources */,
 				2A3E32302B75E15900D0C259 /* RestaurantApp.swift in Sources */,
 				2A3E32632B784F6900D0C259 /* HomeScreen.swift in Sources */,
