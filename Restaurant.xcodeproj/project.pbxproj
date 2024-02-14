@@ -17,6 +17,7 @@
 		2A3E32632B784F6900D0C259 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E32622B784F6900D0C259 /* HomeScreen.swift */; };
 		2A3E32682B7C36AB00D0C259 /* ResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E32672B7C36AB00D0C259 /* ResultsScreen.swift */; };
 		2A3E32702B7C480D00D0C259 /* PhotoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E326F2B7C480D00D0C259 /* PhotoScreen.swift */; };
+		2A3E32732B7C6BC700D0C259 /* ToggleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E32722B7C6BC700D0C259 /* ToggleScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		2A3E32622B784F6900D0C259 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		2A3E32672B7C36AB00D0C259 /* ResultsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreen.swift; sourceTree = "<group>"; };
 		2A3E326F2B7C480D00D0C259 /* PhotoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScreen.swift; sourceTree = "<group>"; };
+		2A3E32722B7C6BC700D0C259 /* ToggleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		2A3E322E2B75E15900D0C259 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				2A3E32712B7C6BB500D0C259 /* ToggleScreen */,
 				2A3E326E2B7C47FD00D0C259 /* Photos */,
 				2A3E32612B784F5600D0C259 /* Home Screen */,
 				2A3E325A2B75E29400D0C259 /* Info.plist */,
@@ -154,6 +157,14 @@
 				2A3E326F2B7C480D00D0C259 /* PhotoScreen.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		2A3E32712B7C6BB500D0C259 /* ToggleScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2A3E32722B7C6BC700D0C259 /* ToggleScreen.swift */,
+			);
+			path = ToggleScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A3E32682B7C36AB00D0C259 /* ResultsScreen.swift in Sources */,
+				2A3E32732B7C6BC700D0C259 /* ToggleScreen.swift in Sources */,
 				2A3E32322B75E15900D0C259 /* ContentView.swift in Sources */,
 				2A3E32302B75E15900D0C259 /* RestaurantApp.swift in Sources */,
 				2A3E32702B7C480D00D0C259 /* PhotoScreen.swift in Sources */,
