@@ -80,7 +80,7 @@ import Combine
             NavigationView {
                 VStack {
                     if userId.isEmpty {
-                        Button("Sign In with Apple") {
+                        Button("Continue with Apple") {
                             self.showingDetail = true
                         }
                         .frame(minWidth: 0, maxWidth: .infinity)
@@ -90,12 +90,12 @@ import Combine
                         .cornerRadius(8)
                         .padding(.horizontal)
                         .sheet(isPresented: $showingDetail, onDismiss: {
-                            // Check if any of the fields are non-empty as a condition to "log in"
+                            
                             if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
-                                self.userId = "loggedIn" // Or use a more meaningful value/ID
+                                self.userId = "loggedIn"
                             }
                         }) {
-                            // Present a modal view for user details input
+                            
                             UserDetailsInputView(firstName: $firstName, lastName: $lastName, email: $email, showModal: $showingDetail)
                         }
                     } else {

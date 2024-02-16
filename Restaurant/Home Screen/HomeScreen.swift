@@ -13,7 +13,7 @@ import Foundation
 struct HomeScreen: View {
     @StateObject private var viewModel = HomeViewModel()
     @State private var favoriteCuisine: String = ""
-    @State private var showingLocationButton = true // Initially show the location button
+    @State private var showingLocationButton = true
     @State private var showingResults = false
     
     var body: some View {
@@ -78,24 +78,23 @@ struct HomeScreen: View {
 }
     
     final class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
-        // Published property to update the map's region in the UI
+        // To update the map's region in the UI
         @Published var region: MKCoordinateRegion
-        // Published property to hold search results
+        // To hold search results
         @Published var searchResults: [MKMapItem] = []
         
-        // CLLocationManager to manage location updates
+        // To manage location updates
         let locationManager = CLLocationManager()
         
         override init() {
-            // Initialize the region with a default location and span.
-            // This can be adjusted to any default location you prefer or dynamically updated later.
+            // For Demo initilized to Bay Area.
             self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
             
             super.init()
             
             // Set up the location manager
             locationManager.delegate = self
-            // Request permission to use location services when the app is in use.
+            // Request permission to use location services
             locationManager.requestWhenInUseAuthorization()
             // Start updating the location.
             locationManager.startUpdatingLocation()
@@ -128,7 +127,7 @@ struct HomeScreen: View {
                     return
                 }
                 
-                // Sort the results by distance from the user's location and take the top 3
+                // Sort the results by closest and take the closest 3
                 let sortedResults = response.mapItems.sorted {
                     $0.placemark.location?.distance(from: userLocation) ?? Double.greatestFiniteMagnitude <
                         $1.placemark.location?.distance(from: userLocation) ?? Double.greatestFiniteMagnitude
@@ -163,7 +162,7 @@ struct HomeScreen: View {
             case .authorizedWhenInUse, .authorizedAlways:
                 manager.startUpdatingLocation()
             default:
-                // Handle other authorization statuses if necessary, such as .denied, .restricted
+                
                 break
             }
         }
