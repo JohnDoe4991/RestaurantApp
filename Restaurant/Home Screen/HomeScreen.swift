@@ -41,8 +41,8 @@ struct HomeScreen: View {
                 
                 if showingLocationButton {
                     LocationButton(.currentLocation) {
-                        // This line is called when the location button is pressed.
-                        viewModel.startLocationUpdates() // Add this method call
+                        
+                        viewModel.startLocationUpdates()
                         showingLocationButton = false
                     }
                     .foregroundColor(.white)
@@ -97,9 +97,7 @@ struct HomeScreen: View {
             locationManager.delegate = self
             // Request permission to use location services
             locationManager.requestWhenInUseAuthorization()
-            // Start updating the location.
-//            locationManager.startUpdatingLocation()
-        }
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters}
         
         // Function to request the current location
         func requestAllowOnceLocationPermission() {
