@@ -80,7 +80,7 @@ import Combine
             NavigationView {
                 VStack {
                     if userId.isEmpty {
-                        Button("Continue with Apple") {
+                        Button("  Continue with Apple") {
                             self.showingDetail = true
                         }
                         .frame(minWidth: 0, maxWidth: .infinity)
