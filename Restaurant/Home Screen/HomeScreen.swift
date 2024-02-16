@@ -41,7 +41,8 @@ struct HomeScreen: View {
                 
                 if showingLocationButton {
                     LocationButton(.currentLocation) {
-                        viewModel.requestAllowOnceLocationPermission()
+                        // This line is called when the location button is pressed.
+                        viewModel.startLocationUpdates() // Add this method call
                         showingLocationButton = false
                     }
                     .foregroundColor(.white)
@@ -88,7 +89,7 @@ struct HomeScreen: View {
         
         override init() {
             // For Demo initilized to Bay Area.
-            self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+            self.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), span: MKCoordinateSpan(latitudeDelta: 0.60, longitudeDelta: 0.60))
             
             super.init()
             
@@ -97,13 +98,17 @@ struct HomeScreen: View {
             // Request permission to use location services
             locationManager.requestWhenInUseAuthorization()
             // Start updating the location.
-            locationManager.startUpdatingLocation()
+//            locationManager.startUpdatingLocation()
         }
         
         // Function to request the current location
         func requestAllowOnceLocationPermission() {
             locationManager.requestLocation()
         }
+        
+        func startLocationUpdates() {
+               locationManager.startUpdatingLocation()
+           }
         
         // Function to perform a search based on the user's cuisine preference
         func searchForCuisine(cuisine: String) {
